@@ -11,13 +11,25 @@ namespace StringBuilderDemo
     {
         static void Main(string[] args)
         {
-            StringBuilder sb = new StringBuilder("Hello world");
-            sb.Replace("world", "C#");
-        //    sb.Remove(6, 5);
-          //  sb.Insert(5, " Aayush");
+            Console.WriteLine("Enter a sentence:");
+            string input = Console.ReadLine();
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in input)
+            {
+                if (!"aeiouAEIOU".Contains(c))
+                {
+                    sb.Append(c);
+                }
 
-          //  sb.AppendFormat("{0:N}", 2500);
-            Console.WriteLine(sb);
+            }
+            Console.WriteLine("Modified sentence:" + sb.ToString());
+            //  StringBuilder sb = new StringBuilder("Hello world");
+            //  sb.Replace("world", "C#");
+            //    sb.Remove(6, 5);
+            //  sb.Insert(5, " Aayush");
+
+            //  sb.AppendFormat("{0:N}", 2500);
+            //Console.WriteLine(sb);
 
             Console.ReadLine();
         }
