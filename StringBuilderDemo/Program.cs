@@ -11,25 +11,13 @@ namespace StringBuilderDemo
     {
         static void Main(string[] args)
         {
-          string s1 = "Aayush";
-            Stopwatch sw1 = new Stopwatch();
-            sw1.Start();
-            for (int i = 0; i < 10000; i++)
-            {
-                s1 = s1 + i;
-               
-            }
-            sw1.Stop();
-            StringBuilder sb = new StringBuilder();
-            Stopwatch sw2 = new Stopwatch();
-            sw2.Start();
-            for (int i = 0; i < 10000; i++)
-            {
-                sb.Append(i);
-            }
-            sw2.Stop();
-            Console.WriteLine("Time taken by string:" + sw1.ElapsedMilliseconds);
-            Console.WriteLine("Time taken by stringBuilder:" + sw2.ElapsedMilliseconds);
+            StringBuilder sb = new StringBuilder("Hello world");
+            sb.Replace("world", "C#");
+        //    sb.Remove(6, 5);
+          //  sb.Insert(5, " Aayush");
+
+          //  sb.AppendFormat("{0:N}", 2500);
+            Console.WriteLine(sb);
 
             Console.ReadLine();
         }
